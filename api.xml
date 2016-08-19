@@ -1,0 +1,12 @@
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="custom_api_publisher">
+    <log level="custom">
+        <property name="Message" value="Publishing transcation data to WSO2 DAS"/>
+    </log>
+    <class name="org.wso2.api.publish.PublishMediate">
+     <property name="dasHost" value="10.100.0.19"/>
+      <property name="dasPort" value="7615"/>
+      <property name="dasUsername" value="admin"/>
+      <property name="dasPassword" value="admin"/>
+      <property name="streamName" value="API_Stream1:1.0.0"/>
+    </class>
+</sequence>
